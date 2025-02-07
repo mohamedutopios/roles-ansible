@@ -1,0 +1,8 @@
+---
+# roles/fortigate_vpn_ipsec/handlers/main.yml
+- name: Restart IPsec VPN
+  fortinet.fortios.fortios_monitor:
+    vdom: "{{ vdom }}"
+    selector: "vpn.ipsec.tunnel-down"
+    params:
+      tunnel: "{{ vpn_phase1.name }}"

@@ -1,0 +1,7 @@
+---
+# handlers file for roles/fortigate_static_route
+- name: Reload Routing Table
+  fortinet.fortios.fortios_monitor:
+    vdom: "{{ vdom }}"
+    selector: "get.router.info.routing-table"
+

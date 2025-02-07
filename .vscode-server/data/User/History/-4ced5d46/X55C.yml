@@ -1,0 +1,14 @@
+---
+# vars file for fortigate_interfaces
+interfaces:
+  - name: "port1"
+    ip: "192.168.10.1/24"
+    allowaccess: "ping https ssh"
+    status: "up"
+  - name: "port2"
+    ip: "192.168.20.1/24"
+    allowaccess: "ping"
+    status: "up"
+ansible_httpapi_use_ssl: no
+ansible_httpapi_validate_certs: no
+ansible_httpapi_port: 80

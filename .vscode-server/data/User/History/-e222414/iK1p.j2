@@ -1,0 +1,9 @@
+config system interface
+{% for interface in interfaces %}
+edit "{{ interface.name }}"
+  set ip {{ interface.ip }}
+  set allowaccess {{ interface.allowaccess }}
+  set status {{ interface.status }}
+next
+{% endfor %}
+end

@@ -1,0 +1,9 @@
+---
+# handlers file for roles/fortigate_static_route
+- name: Restart Network Interface to Refresh Routing Table
+  fortinet.fortios.fortios_monitor:
+    vdom: "{{ vdom }}"
+    selector: "dhcp-renew.system.interface"
+    params:
+      interface: "port2"
+

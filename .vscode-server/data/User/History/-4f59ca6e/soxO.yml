@@ -1,0 +1,8 @@
+---
+# tasks file for roles/fortigate_static_route
+- name: Configure Static Routes using template
+  fortinet.fortios.fortios_router_static:
+    vdom: "{{ vdom }}"
+    state: present
+    router_static: "{{ lookup('template', 'static_routes.j2') }}"
+  notify: Reload Routing Table

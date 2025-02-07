@@ -1,0 +1,9 @@
+---
+- name: Reload Fortigate Interfaces
+  fortios_system_interface:
+    host: "{{ fortigate_host }}"
+    username: "{{ fortigate_username }}"
+    password: "{{ fortigate_password }}"
+    vdom: "{{ fortigate_vdom }}"
+    https: true
+    ssl_verify: false

@@ -1,0 +1,11 @@
+---
+- name: Configure network interfaces on Fortigate
+  fortios_config:
+    host: "{{ fortigate_host }}"
+    username: "{{ fortigate_username }}"
+    password: "{{ fortigate_password }}"
+    vdom: "{{ fortigate_vdom }}"
+    config: "{{ lookup('template', 'interface_config.j2') }}"
+    https: true
+    ssl_verify: false
+  notify: Reload Fortigate Interfaces
